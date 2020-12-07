@@ -13,7 +13,6 @@ body {
 
 .header {
     padding: 20px, 35px;
-    background-color: var(--tertiary-color);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -28,17 +27,17 @@ body {
 }
 
 .header h1 {
-    display: inline-block;
+    background-color: #9e9e9e;
+    font-weight: bold;
     font-size: 48px;
-    color: #000000;
+    color:#000000;
+    margin: 20px 0 20px 0;
+    padding: 5px 20px;
 }
 
-.header nav {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
+header a {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .header nav {
@@ -51,6 +50,7 @@ body {
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    margin: 20px 0 0 0;
 }
 
 .header nav ul li a {
@@ -58,6 +58,17 @@ body {
     font-weight: lighter;
     font-size: 1.5vw;
     color: #ffffff;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.header nav ul li a:hover {
+    background-color: #9e9e9e;
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 0;
+    transition: 1s;
+    border-radius: 15px;
 }
 
 /*End Header*/
@@ -76,22 +87,8 @@ body {
     align-items: flex-start;
 }
 
-.about {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-top: 20px;
-}
-
-.work {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-top: 20px;
-}
-
-
 .section-title {
+    display: flex;
     font-size: 36px;
     color: #000000;
     border-right: 3px solid;
@@ -99,34 +96,118 @@ body {
     padding-top: 30px;
     text-align: right;
     margin: 0;
+    margin-right: 0;
     width: 20%;
     justify-content: flex-start;
+}
+
+.about, .work, .contact {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.section-title h2 {
+    flex: 1;
+    padding-bottom: 20px;
 }
 
 .section-content {
     flex: 1;
     padding-left: 30px;
+    width: 80%;
+    margin: 0;
 }
 
 .work-grid-container {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 5vw);
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(9, 3vw);
     grid-gap: 10px;
     width: 80%;
 }
 
 .grid-item.run {
     display: flex;
-    grid-column: 1/ span 4;
-    grid-row: 1/ span 3;
+    grid-column: 5/ span 4;
+    grid-row: 7/ span 3;
     border: 5px black;
+    border-radius: 20px;
 }
+
+.grid-item.place {
+    display: flex;
+    grid-column: 1/ span 8;
+    grid-row: 1/ span 6;
+    border: 5px black;
+    border-radius: 20px;
+}
+
+.grid-item.place2 {
+    display: flex;
+    grid-column: 1/ span 4;
+    grid-row: 7/ span 3;
+    border: 5px black;
+    border-radius: 20px;
+}
+
+.place a img, .place2 a img, .place3 a img, .horiseon a img, .run a img {
+    display: flex;
+    width: 100%;
+    height: 100%;;
+    border: 3px solid;
+    border-color: #000000;
+    border-radius: 20px;
+}
+
+.grid-item:hover, .grid-item-run a img::after {
+    background-color: #000000;
+    opacity: 0.5;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
 
 .grid-item.run a img {
     display: flex;
     width: 100%;
     height: 100%;;
-    border: 5px;
+    border: 3px solid;
     border-color: #000000;
+    border-radius: 20px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.contact nav {
+    margin: 7px 0;
+}
+
+.contact nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 75px 0 0 0;
+}
+
+.contact nav ul li a {
+    padding: 10px 50px;
+    font-weight: lighter;
+    font-size: 1.5vw;
+    color: #ffffff;
+    border-radius: 15px;
+}
+
+.contact nav ul li a:hover {
+    background-color: #9e9e9e;
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 0;
+    transition: 1s;
+    border-radius: 15px;
 }
